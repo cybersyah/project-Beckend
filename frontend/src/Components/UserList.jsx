@@ -13,14 +13,14 @@ const UserList = () => {
 
     // Get Users
     const getUsers = async () => {
-        const response = await axios.get('http://localhost:3001/users')
+        const response = await axios.get('https://project-akhir-api.vercel.app/users')
         setUsers(response.data)
     }
 
     // Delete User
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/users/${id}`)
+            await axios.delete(`https://project-akhir-api.vercel.app/users/${id}`)
             getUsers();
         } catch (error) {
             console.log(error)
